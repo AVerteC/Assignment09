@@ -26,16 +26,39 @@
 // const result = regex.exec(phrase)
 // alert(`'fox' starts at the index: ${result.index}`)
 //STEP 5
-let phrase = "The quick brown fox jumps over the lazy dog"
-const searchKey = 'fox'
-const result = phrase.lastIndexOf(searchKey)
-alert(`the last 'fox' starts at the index: ${result}`)
+// let phrase = "The quick brown fox jumps over the lazy dog"
+// const searchKey = 'fox'
+// const result = phrase.lastIndexOf(searchKey)
+// alert(`the last 'fox' starts at the index: ${result}`)
 //STEP 6
-
+// let phrase = "The quick brown fox jumps over the lazy dog"
+// const key = 'the lazy dog'
+// let name = prompt('Enter your full name: ')
+// const result = phrase.replace(key, name)
+// alert(`Replacing 'the lazy dog' with your full name results in: \n${result}`)
 //STEP 7
+// let phrase = "The quick brown fox jumps over the lazy dog"
+// let searchKey = prompt('Enter a word to search for: ')
+// if (searchKey === null) {
+//     alert('Invalid input.')
+// }
+// const pattern = new RegExp(`(${searchKey})`, 'g')
+// const result = phrase.match(pattern)
+// let matches = 0
+// if (result !== null) {
+//     matches = result.length
+// }
+// alert(`'${searchKey}' was found ${matches} times.`)
 
 //STEP 8
-
+// let old_string = "The quick brown fox jumps over the lazy dog"
+// let new_string = old_string.substring(31)
+// alert(`uppercase new_string: '${new_string.toUpperCase()}'`)
 //STEP 9
-
+// let text = " THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG          "
+// alert(`'${text.trim().toLowerCase()}'`)
 //STEP 10
+// let text = "the quick brown fox jumps over the lazy dog"
+// let temp = text.charAt(0).toUpperCase()
+// text = temp + text.substring(1)
+// alert(text)
