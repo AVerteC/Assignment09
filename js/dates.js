@@ -1,19 +1,19 @@
 // // STEP 1
 // const months = {
-//     "january": 0,
-//     "february": 1,
-//     "march": 2,
-//     "april": 3,
+//     "jan": 0, "january": 0,
+//     "feb": 1, "february": 1,
+//     "mar": 2, "march": 2,
+//     "apr": 3, "april": 3,
 //     "may": 4,
-//     "june": 5,
-//     "july": 6,
-//     "august": 7,
-//     "september": 8,
-//     "october": 9,
-//     "november": 10,
-//     "december": 11
+//     "jun": 5, "june": 5,
+//     "jul": 6, "july": 6,
+//     "aug": 7, "august": 7,
+//     "sep": 8, "september": 8,
+//     "oct": 9, "october": 9,
+//     "nov": 10, "november": 10,
+//     "dec": 11, "december": 11
 // }
-// let month = prompt('Enter the month:\nex: January')
+// let month = prompt('Enter the month:\nex: January or Jan')
 // if (month === null || month.length === 0) {
 //     let temp = 'Invalid month input.'
 //     alert(temp)
@@ -35,9 +35,8 @@
 
 // const daysInMonth = new Date(year, monthNumber, 0).getDate()
 // let temp = month.charAt(0).toUpperCase() + month.substring(1)
-// // console.log(temp)
 // console.log(`There are ${daysInMonth} days in ${month}, ${year}.`)
-// STEP 2
+// // STEP 2
 // function isValidDate(year, month, day) {
 //     let tempDate = new Date(year, month, day);
 //     return tempDate.getFullYear() === year &&
@@ -51,11 +50,7 @@
 //     throw new Error(temp)
 // }
 // dateNums = date.split('-')
-// if (isValidDate(dateNums[0], dateNums[1], dateNums[2]) === false) {
-//     let temp = 'Invalid date input.'
-//     alert(temp)
-//     throw new Error(temp)
-// }
+
 
 // for (let i = 0; i < 3; i++) {
 //     dateNums[i] = Number(dateNums[i])
@@ -65,6 +60,14 @@
 //         throw new Error(temp)
 //     }
 // }
+
+// if (isValidDate(dateNums[0], dateNums[1], dateNums[2]) === false) {
+//     let temp = 'Invalid date input.'
+//     alert(temp)
+//     throw new Error(temp)
+// }
+
+// console.log(dateNums)
 // if (dateNums.length !== 3 || dateNums[1] === 0 || dateNums[2] === 0) {
 //     let temp = 'Invalid date input.'
 //     alert(temp)
@@ -86,7 +89,7 @@
 //     10: "November",
 //     11: "December"
 // }
-// console.log(`The month for the date ${date} is ${months[dateObj]}.`)
+// console.log(`The month for the date ${dateNums[0]}-${dateNums[1]}-${dateNums[2]} is ${months[dateObj]}.`)
 //STEP 3
 // function isValidDate(year, month, day) {
 //     let tempDate = new Date(year, month, day);
