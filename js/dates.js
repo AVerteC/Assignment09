@@ -1,4 +1,4 @@
-//STEP 1
+// // STEP 1
 // const months = {
 //     "january": 0,
 //     "february": 1,
@@ -13,7 +13,7 @@
 //     "november": 10,
 //     "december": 11
 // }
-// let month = prompt('Enter the month: ')
+// let month = prompt('Enter the month:\nex: January')
 // if (month === null || month.length === 0) {
 //     let temp = 'Invalid month input.'
 //     alert(temp)
@@ -35,9 +35,15 @@
 
 // const daysInMonth = new Date(year, monthNumber, 0).getDate()
 // let temp = month.charAt(0).toUpperCase() + month.substring(1)
-// console.log(temp)
+// // console.log(temp)
 // console.log(`There are ${daysInMonth} days in ${month}, ${year}.`)
-// //STEP 2
+// STEP 2
+// function isValidDate(year, month, day) {
+//     let tempDate = new Date(year, month, day);
+//     return tempDate.getFullYear() === year &&
+//         tempDate.getMonth() === month &&
+//         tempDate.getDate() === day;
+// }
 // let date = prompt("Enter the date in YYYY-MM-DD format: ")
 // if (date === null || date.length === 0) {
 //     let temp = 'Invalid date input.'
@@ -45,6 +51,12 @@
 //     throw new Error(temp)
 // }
 // dateNums = date.split('-')
+// if (isValidDate(dateNums[0], dateNums[1], dateNums[2]) === false) {
+//     let temp = 'Invalid date input.'
+//     alert(temp)
+//     throw new Error(temp)
+// }
+
 // for (let i = 0; i < 3; i++) {
 //     dateNums[i] = Number(dateNums[i])
 //     if (isNaN(dateNums[i])) {
@@ -59,8 +71,7 @@
 //     throw new Error(temp)
 // }
 
-
-// dateObj = new Date(date[0], (date[1] - 1), date[2]).getMonth()
+// dateObj = new Date(dateNums[0], (dateNums[1] - 1), dateNums[2]).getMonth()
 // const months = {
 //     0: "January",
 //     1: "February",
@@ -77,6 +88,13 @@
 // }
 // console.log(`The month for the date ${date} is ${months[dateObj]}.`)
 //STEP 3
+// function isValidDate(year, month, day) {
+//     let tempDate = new Date(year, month, day);
+//     return tempDate.getFullYear() === year &&
+//         tempDate.getMonth() === month &&
+//         tempDate.getDate() === day;
+// }
+
 // let date = prompt("Enter the date in YYYY-MM-DD format: ")
 // if (date === null || date.length === 0) {
 //     let temp = 'Invalid date input.'
@@ -84,6 +102,11 @@
 //     throw new Error(temp)
 // }
 // dateNums = date.split('-')
+// if (isValidDate(dateNums[0], dateNums[1], dateNums[2]) === false) {
+//     let temp = 'Invalid date input.'
+//     alert(temp)
+//     throw new Error(temp)
+// }
 // for (let i = 0; i < 3; i++) {
 //     dateNums[i] = Number(dateNums[i])
 //     if (isNaN(dateNums[i])) {
@@ -97,7 +120,9 @@
 //     alert(temp)
 //     throw new Error(temp)
 // }
-// dateObj = new Date(date[0], (date[1] - 1), date[2]).getDay()
+
+// dateObj = new Date(dateNums[0], (dateNums[1] - 1), dateNums[2]).getDay()
+
 // if (dateObj === 0 || dateObj === 6) {
 //     console.log(`The date ${date} falls on a weekend.`)
 // }

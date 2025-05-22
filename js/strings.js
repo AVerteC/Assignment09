@@ -1,6 +1,6 @@
 //STEP 1
 // let name = prompt('Enter your name:')
-// if (name === null || name.length === 0) {
+// if (name === null) {
 //     alert('Invalid name input')
 // }
 // alert(`The length of your name is: ${name.length}`)
@@ -8,11 +8,13 @@
 // let name = prompt('Enter your name: ')
 // if (name === null || name.length === 0) {
 //     alert('Invalid name input')
+//     throw new Error('Invalid name input')
 // }
 
 // let number = parseInt(prompt('Specify the index you want to find a letter at: '))
 // if (isNaN(number) || number < 0 || number > name.length - 1) {
 //     alert('You have entered an invalid index.')
+//     throw new Error('You have entered an invalid index.')
 // } else {
 //     alert(`The character at index ${number} is: ${name.charAt(number)}`)
 // }
@@ -53,7 +55,7 @@
 //STEP 8
 // let old_string = "The quick brown fox jumps over the lazy dog"
 // let new_string = old_string.substring(31)
-// alert(`uppercase new_string: '${new_string.toUpperCase()}'`)
+// alert(`Uppercase new_string: '${new_string.toUpperCase()}'`)
 //STEP 9
 // let text = " THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG          "
 // alert(`'${text.trim().toLowerCase()}'`)
