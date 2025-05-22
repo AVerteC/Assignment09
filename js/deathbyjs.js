@@ -27,20 +27,32 @@
 // }
 // console.log(vowelCounter('The quick brown fox'))
 // //STEP 4
-// function idGenerator(length) {
-//     let output = ""
-//     for (let i = 0; i < length; i++) {
-//         let letterCode = Math.floor(Math.random() * (122 - 97 + 1)) + 97
-//         let letter = String.fromCharCode(letterCode)
-//         let letterCase = Math.round(Math.random())
-//         if (letterCase === 1) {
-//             letter = letter.toUpperCase()
-//         }
-//         output += letter
-//     }
-//     return output
-// }
-// console.log(idGenerator(10))
+function idGenerator(length) {
+    let output = ""
+    for (let i = 0; i < length; i++) {
+        let numberCode = Math.floor(Math.random() * (57 - 48 + 1)) + 48
+        let letterCode = Math.floor(Math.random() * (122 - 97 + 1)) + 97
+        let currentCode
+
+        // Choose if char will be number or letter
+        let numberOrLetter = Math.round(Math.random())
+        if (numberOrLetter === 1) {
+            currentCode = numberCode
+        } else {
+            currentCode = letterCode
+        }
+        let char = String.fromCharCode(currentCode)
+
+        // Choose if char will be upper or lower case
+        let letterCase = Math.round(Math.random())
+        if (letterCase === 1 && numberOrLetter === 0) {
+            char = char.toUpperCase()
+        }
+        output += char
+    }
+    return output
+}
+console.log(idGenerator(10))
 // //STEP 5
 // function Longest_Country_Name(items) {
 //     if (items === undefined || items.length === 0) {
